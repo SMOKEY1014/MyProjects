@@ -1,0 +1,249 @@
+/* Reset some default styles */
+body, h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(90deg, #8a4595, #eb65b3);
+    color: black;
+}
+
+header {
+    padding: 20px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.heading p {
+    color: linear-gradient(90deg, #000000, #5f5e5e);;
+}
+
+.subheading {
+    color: gray;
+}
+
+.bio p {
+    padding : 15px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row; /* By default, display side-by-side */
+    align-items: center;
+    background: linear-gradient(90deg, #8a4595, #eb65b3);
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+/* Media query for mobile view (max-width: 768px) */
+/* Media query for mobile view (max-width: 768px) */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Keep the elements side-by-side */
+        align-items: center;
+        padding: 20px;
+    }
+
+    .header-card {
+        /* Adjust the width to accommodate the content */
+        width: auto; /* Allow the card to expand based on content */
+        margin: 05px; /* Adjust the margin as needed */
+        padding: 05px; /* Add padding to the card */
+    }
+
+    .profile-image {
+        width: 75px; /* Adjust the profile image size as needed */
+        height: 75px; /* Adjust the profile image size as needed */
+    }
+
+    .social-icons {
+        flex-direction: row; /* Keep the social icons in a row */
+        margin-top: 0; /* Remove the top margin for social icons */
+    }
+
+
+
+    .header-card,
+    .bio {
+        width: 100%; /* Full width on mobile */
+    }
+}
+
+/* Card styles */
+
+.header-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    /* width: 300px; */
+    margin: 20px auto;
+    width: 30%;
+    margin: 20px 10px;
+    
+    perspective: 1000px;
+    transition: transform 0.5s;
+}
+.profile-image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    margin: 20px auto;
+}
+.grpcard {
+    display: flex;
+    flex-direction: row; /* By default, display side-by-side */
+    align-items: center;
+    background: linear-gradient(90deg, #8f3ac4, #b76ec2);
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 20px;
+
+    
+}
+.card-container {
+    
+    justify-content: space-between;
+    background: linear-gradient(90deg, #8f3ac4, #b76ec2);
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    margin: 20px auto;
+    transition: transform 0.3s ease;
+
+
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+/* Add more CSS for the social icons and hover effects */
+/* Card Flip Animation */
+/* CSS for the flip card */
+.flip-card {
+    font-family: 'Romanesco', sans-serif;
+    width: 300px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    perspective: 1000px;
+    margin: 20px; /* Adjust the margin as needed */
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+     /* Set the front card background color */
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    font-size: 20px; /* Set the font size for the front content */
+}
+
+.flip-card-back {
+     /* Set the back card background color */
+     font-family: 'Poppins', sans-serif;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    font-size: 16px; /* Set the font size for the back content */
+}
+/* CSS for the crown overlay */
+.crown-container {
+    font-family: 'Romanesco', sans-serif;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999; /* Higher z-index to ensure it's on top*/
+}
+
+.crown-image {
+    position: absolute;
+    top: 50px; /* Adjust the top position as needed */
+    left: 50px; /* Adjust the left position as needed */
+    width: 250px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Define the Romanesco font */
+@font-face {
+    font-family: 'Romanesco';
+    src: url('fonts/Romanesco-Regular.ttf') format('woff2'),
+         url('fonts/Romanesco-Regular.ttf') format('woff');
+    /* Add more font formats if available */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply the Romanesco font to the bio paragraph */
+.bio {
+    font-family: 'Romanesco', sans-serif;
+    font-size: 40px;
+    /* Add additional styles for your bio paragraph */
+    /* Set the maximum width of the bio paragraph */
+    max-width: 450px; /* Adjust this value based on the crown width */
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
